@@ -1,0 +1,11 @@
+
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="110" cy="110" r="100" stroke="#00BCD4" stroke-width="2" fill="url(#grad1)" />
+  <path d="M110 40 L130 180 L90 180 Z" fill="#00BCD4" opacity="0.3"/>
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+</svg>

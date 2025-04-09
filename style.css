@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #161616;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.navbar .logo {
+  font-weight: 600;
+  color: #00bcd4;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #1c1c1c, #000000);
+  position: relative;
+  overflow: hidden;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('hero-pattern.svg') no-repeat center center / cover;
+  opacity: 0.05;
+}
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+.hero-content span {
+  color: #00bcd4;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #0097a7;
+}
+section {
+  padding: 5rem 2rem;
+}
+
+/* New background styling for each section */
+.about {
+  background: linear-gradient(135deg, #181818, #121212);
+}
+.services {
+  background: linear-gradient(135deg, #151515, #1a1a1a);
+}
+.portfolio {
+  background: linear-gradient(135deg, #101010, #1c1c1c);
+}
+.contact {
+  background: linear-gradient(135deg, #121212, #161616);
+}
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+.service-grid, .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-box {
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #00bcd4;
+}
+.service-box i {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+.portfolio-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background: #161616;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: none;
+  }
+  .about .container {
+    flex-direction: column;
+  }
+}
+
+
+/* Background visual enhancements */
+.about {
+  background: linear-gradient(to bottom right, #1b1b1b, #0e0e0e);
+  position: relative;
+}
+.services {
+  background: linear-gradient(to right, #121212, #1c1c1c);
+  position: relative;
+}
+.portfolio {
+  background: linear-gradient(to left, #1a1a1a, #101010);
+  position: relative;
+}
+.contact {
+  background: linear-gradient(to bottom, #141414, #0a0a0a);
+  position: relative;
+}
+
+/* Add subtle colored overlay shapes */
+.about::before, .services::before, .portfolio::before, .contact::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0,188,212,0.15), transparent 70%);
+  z-index: 0;
+}
+.about > *, .services > *, .portfolio > *, .contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated fade-in on scroll */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating circles background */
+.floating-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.floating-circles span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 188, 212, 0.15);
+  animation: floatAnim 20s linear infinite;
+  border-radius: 50%;
+  bottom: -150px;
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* Interaktif hover effect untuk service box */
+.service-box {
+  transition: transform 0.3s ease, background 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+.service-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(0, 188, 212, 0.1);
+}
+
+/* Styling untuk ilustrasi */
+.illustration {
+  text-align: center;
+  margin: 40px 0;
+}
+.illustration img {
+  width: 220px;
+  opacity: 0.8;
+  transition: transform 0.4s ease;
+}
+.illustration img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+
+.parallax {
+  background-image: url('assets/parallax-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}

@@ -1,4 +1,3 @@
-
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -46,7 +45,7 @@ function typeEffect() {
 typedText.textContent = "";
 typeEffect();
 
-// Fade-in animation
+// Fade-in animation using IntersectionObserver
 const faders = document.querySelectorAll(".fade-in");
 
 const appearOptions = {
@@ -66,7 +65,7 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// Intersection Observer untuk animasi antar section
+// Intersection Observer untuk .fade-section
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -79,4 +78,13 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-section').forEach(section => {
   observer.observe(section);
+});
+
+// Fallback jika IntersectionObserver gagal (misalnya di browser lama)
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.fade-section').forEach(el => {
+    if (!el.classList.contains('visible')) {
+      el.classList.add('visible');
+    }
+  });
 });

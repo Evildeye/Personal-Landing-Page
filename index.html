@@ -2,81 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Brand | Husen Fahmi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Husen Fahmi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="navbar">
     <div class="logo">HUSEN FAHMI</div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="social-icons">
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://jobstreet.co.id" target="_blank" aria-label="JobStreet">
+        <i class="fas fa-briefcase"></i>
+      </a>
+      <a href="https://github.com" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </header>
 
-  <section id="home" class="hero fade-section">
-    <div class="overlay"></div>
+  <section id="home" class="hero">
     <div class="hero-content">
       <h1>Hello! I'm <span>Husen Fahmi</span></h1>
       <p>Student of SMAN 1 RENGASDENGKLOK School</p>
       <a href="#contact" class="btn">Contact Me</a>
     </div>
-  </section>
-
-  <section id="about" class="about fade-section">
-    <div class="container">
-      <div class="about-img">
-        <img src="img/profile.jpg" alt="Husen Fahmi"/>
-      </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I’m Husen Fahmi, a student and I’m currently learning to build engaging and modern websites while improving my creativity and logic. I don't know, just bored and need a job.</p>
-        <a href="cv-husenfahmi.pdf" class="btn" download>Download CV</a>
-      </div>
+    <div class="profile-picture">
+      <img src="profile.jpg" alt="Husen Fahmi" />
     </div>
   </section>
 
-  <section id="services" class="services fade-section">
-    <h2>My Services</h2>
-    <div class="service-grid">
-      <div class="service-box"><i class="fas fa-pencil-ruler"></i><p>Communication & Presentation</p></div>
-      <div class="service-box"><i class="fas fa-code"></i><p>Problem Solving</p></div>
-      <div class="service-box"><i class="fas fa-paint-brush"></i><p>Adaptability</p></div>
-      <div class="service-box"><i class="fas fa-search"></i><p>Time Management</p></div>
-      <div class="service-box"><i class="fas fa-bullhorn"></i><p>Web Design with AI</p></div>
-      <div class="service-box"><i class="fas fa-mobile-alt"></i><p>Prompt Engineering</p></div>
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Husen Fahmi, a student and I'm currently learning to build engaging and modern websites while improving my creativity and logic. I don't know, just bored and need a job.</p>
+    <a href="#" class="btn">Download CV</a>
   </section>
 
-  <section id="portfolio" class="portfolio fade-section">
-    <h2>My Recent Work</h2>
-    <div class="portfolio-grid">
-      <img src="project1.jpg" alt="Project 1"/>
-      <img src="project2.jpg" alt="Project 2"/>
-      <img src="project3.jpg" alt="Project 3"/>
-      <img src="project4.jpg" alt="Project 4"/>
-    </div>
-  </section>
-
-  <footer id="contact" class="contact fade-section">
-    <h2>Contact Me</h2>
-    <p>Email: husenfahmi252@email.com</p>
-    <p>Phone: 085774590205</p>
-    <p>Instagram: @evildeye</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/husenfahmi" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-      <a href="https://www.jobstreet.co.id/id/jobseeker/profile" target="_blank" title="JobStreet"><i class="fas fa-briefcase fa-2x"></i></a>
-      <a href="https://github.com/evildeye" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
-    </div>
-    <p>© 2025 Husen Fahmi. All rights reserved.</p>
-  </footer>
+  <!-- Tambahan section lainnya jika perlu -->
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add active class on scroll
 const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('.navbar nav ul li a');
+const navLinks = document.querySelectorAll('.navbar nav ul li a');
 
 window.addEventListener('scroll', () => {
   let current = '';
@@ -22,10 +22,10 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  navLi.forEach(li => {
-    li.classList.remove('active');
-    if (li.getAttribute('href') === '#' + current) {
-      li.classList.add('active');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
     }
   });
 });
@@ -42,49 +42,26 @@ function typeEffect() {
     setTimeout(typeEffect, 100);
   }
 }
+
 typedText.textContent = "";
 typeEffect();
 
-// Fade-in animation using IntersectionObserver
-const faders = document.querySelectorAll(".fade-in");
+// Fade-in animation
+const faders = document.querySelectorAll(".fade-section");
 
 const appearOptions = {
   threshold: 0.2,
   rootMargin: "0px 0px -50px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.classList.add("appear");
+    entry.target.classList.add("visible");
     observer.unobserve(entry.target);
   });
 }, appearOptions);
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
-});
-
-// Intersection Observer untuk .fade-section
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-document.querySelectorAll('.fade-section').forEach(section => {
-  observer.observe(section);
-});
-
-// Fallback jika IntersectionObserver gagal (misalnya di browser lama)
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.fade-section').forEach(el => {
-    if (!el.classList.contains('visible')) {
-      el.classList.add('visible');
-    }
-  });
 });

@@ -229,7 +229,6 @@ footer.contact {
   gap: 20px;
 }
 
-
 .fade-section {
   opacity: 0;
   transform: translateY(30px);
@@ -261,8 +260,6 @@ footer.contact {
   margin-bottom: 20px;
 }
 
-
-
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -291,4 +288,89 @@ footer.contact {
   border: 5px solid #00aaff;
   object-fit: cover;
   margin-top: 25px;
+}
+
+/* ===== Responsive Design untuk Mobile ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content span {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .rounded-frame {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .about .container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-img {
+    width: 150px;
+  }
+
+  .service-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    padding: 8px 18px;
+  }
+
+  footer.contact {
+    padding: 30px 10px;
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
 }

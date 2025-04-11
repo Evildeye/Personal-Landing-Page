@@ -1,36 +1,112 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
+  font-size: 26px;
+  font-weight: 700;
   color: #00bfff;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-left: 20px;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    font-size: 2.3rem;
-  }
-}
-
-.social-icons {
+.navbar ul {
+  list-style: none;
   display: flex;
-  justify-content: center;
-  margin: 20px 0;
   gap: 20px;
 }
 
-.social-icons a {
-  color: #00bfff;
-  font-size: 1.8rem;
-  transition: transform 0.3s ease;
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #0077b5;
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: #00bfff;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 1rem 0;
+  background: linear-gradient(to bottom right, #e0f7ff, #f7faff);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.hero-content span {
+  color: #00bfff;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wave {
+  display: block;
+  margin-top: 2rem;
+}
+
+.about {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #1f2c7c;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.social-icons-home, .social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons-home a, .social-icons a {
+  font-size: 28px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-icons-home a:hover, .social-icons a:hover {
+  color: #007bff;
 }

@@ -1,6 +1,6 @@
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Active class on scroll
+// Add active class on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar nav ul li a');
 
@@ -24,23 +24,36 @@ window.addEventListener('scroll', () => {
 
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
+    if (link.getAttribute('href') === '#' + current) {
       link.classList.add('active');
     }
   });
 });
 
 // Typing effect
-const typedText = document.querySelector(".hero-content h1 span");
-const text = "Husen Fahmi";
+const typedText = document.getElementById("typed-text");
+const name = "Husen Fahmi";
 let index = 0;
 
 function typeEffect() {
-  if (index < text.length) {
-    typedText.textContent += text.charAt(index);
+  if (index < name.length) {
+    typedText.textContent += name.charAt(index);
     index++;
     setTimeout(typeEffect, 100);
   }
 }
 typedText.textContent = "";
 typeEffect();
+
+// Fade-in section
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-section').forEach(section => {
+  observer.observe(section);
+});

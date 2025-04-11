@@ -2,89 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Brand | Husen Fahmi</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Husen Fahmi - Personal Website</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Husen Fahmi</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.linkedin.com/in/husenfahmi" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="https://www.jobstreet.co.id/id/jobseeker/profile" target="_blank"><i class="fa-solid fa-briefcase"></i></a></li>
-        <li><a href="https://github.com/Evildeye" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="home" class="hero fade-section">
-    <div class="overlay"></div>
-    <div class="hero-content slide-in-left">
-      <h1>Hello! I'm <span>Husen Fahmi</span></h1>
-      <p>Student of SMAN 1 RENGASDENGKLOK School</p>
-      <a href="#contact" class="btn">Contact Me</a>
-      <div class="home-image">
-        <img src="img/profile.jpg" alt="Profile" class="rounded-frame" />
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HUSEN FAHMI</div>
+    <ul>
+      <li><a href="#about"><i class="fas fa-user"></i></a></li>
+      <li><a href="#services"><i class="fas fa-cogs"></i></a></li>
+      <li><a href="#portfolio"><i class="fas fa-briefcase"></i></a></li>
+      <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://www.jobstreet.co.id" target="_blank"><i class="fas fa-briefcase"></i></a></li>
+      <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Husen Fahmi</span></h1>
+      <p>Web Developer & Tech Enthusiast</p>
+      <a href="#portfolio" class="btn">View My Work</a>
     </div>
-    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-      <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,74.7C672,53,768,43,864,69.3C960,96,1056,160,1152,165.3C1248,171,1344,117,1392,90.7L1440,64L1440,0L0,0Z"></path>
-    </svg>
   </section>
 
-  <section id="about" class="about fade-section">
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-title-wrapper">
+      <h2 class="section-title">About Me</h2>
+    </div>
     <div class="container">
-      <img src="img/profile.jpg" alt="Your Photo" class="about-img"/>
+      <img src="IMG_0045.jpeg" alt="Profile" class="rounded-frame" />
       <div class="about-text">
-        <h2 class="section-title">About Me</h2>
-        <p>I’m Husen Fahmi, a student and I’m currently learning to build engaging and modern websites while improving my creativity and logic. I don't know, just bored and need a job</p>
-        <a href="cv-husenfahmi.pdf" class="btn" download>Download CV</a>
+        <p>Saya adalah seorang pengembang web yang berdedikasi dengan semangat tinggi terhadap teknologi dan inovasi. Saya senang membangun solusi kreatif untuk web dan selalu belajar hal baru dalam dunia coding.</p>
       </div>
     </div>
   </section>
 
-  <div class="section-title-wrapper">
-    <h2 class="section-title">My Services</h2>
-  </div>
-
-  <div id="services" class="service-grid">
-    <div class="service-box"><i class="fas fa-pencil-ruler"></i><p>Communication & Presentation</p></div>
-    <div class="service-box"><i class="fas fa-code"></i><p>Problem Solving</p></div>
-    <div class="service-box"><i class="fas fa-paint-brush"></i><p>Adaptability</p></div>
-    <div class="service-box"><i class="fas fa-search"></i><p>Time Management</p></div>
-    <div class="service-box"><i class="fas fa-bullhorn"></i><p>Web Design with AI</p></div>
-    <div class="service-box"><i class="fas fa-mobile-alt"></i><p>Prompt Engineering</p></div>
-  </div>
-
-  <div class="section-title-wrapper">
-    <h2 class="section-title">My Recent Work</h2>
-  </div>
-
-  <div id="portfolio" class="portfolio-grid">
-    <img src="project1.jpg" alt="Project 1"/>
-    <img src="project2.jpg" alt="Project 2"/>
-    <img src="project3.jpg" alt="Project 3"/>
-    <img src="project4.jpg" alt="Project 4"/>
-  </div>
-
-  <footer id="contact" class="contact fade-section">
-    <h2>Contact Me</h2>
-    <p>Email: husenfahmi252@email.com</p>
-    <p>Phone: 085774590205</p>
-    <p>Instagram: @evildeye</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/husenfahmi" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-      <a href="https://www.jobstreet.co.id/id/jobseeker/profile" target="_blank"><i class="fa-solid fa-briefcase fa-2x"></i></a>
-      <a href="https://github.com/Evildeye" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+  <!-- Services -->
+  <section id="services">
+    <div class="section-title-wrapper">
+      <h2 class="section-title">My Services</h2>
     </div>
-    <p>© 2025 Husen Fahmi. All rights reserved.</p>
+    <div class="service-grid">
+      <div class="service-box">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive Design</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-server"></i>
+        <h3>Backend Integration</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="section-title-wrapper">
+      <h2 class="section-title">My Portfolio</h2>
+    </div>
+    <div class="portfolio-grid">
+      <img src="https://via.placeholder.com/300x200" alt="Project 1" />
+      <img src="https://via.placeholder.com/300x200" alt="Project 2" />
+      <img src="https://via.placeholder.com/300x200" alt="Project 3" />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer class="contact">
+    <p>Get in touch: husen@example.com</p>
+    <div class="social-icons">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-github"></i>
+      <i class="fas fa-briefcase"></i>
+    </div>
   </footer>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
@@ -9,20 +9,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Highlight nav link saat scroll
+// Active class on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar nav ul li a');
 
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
-    if (pageYOffset >= section.offsetTop - 60) {
-      current = section.id;
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 60) {
+      current = section.getAttribute('id');
     }
   });
 
   navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
   });
 });
 
@@ -40,20 +44,3 @@ function typeEffect() {
 }
 typedText.textContent = "";
 typeEffect();
-
-// Fade-in on scroll
-const fadeElements = document.querySelectorAll(".fade-in, .fade-section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible', 'appear');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px"
-});
-
-fadeElements.forEach(el => observer.observe(el));

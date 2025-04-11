@@ -209,21 +209,26 @@ footer.contact {
   color: #555;
 }
 
-.social-icons {
-  margin-top: 15px;
+.navbar a i,
+.social-icons i {
+  color: #333;
+  margin: 0 8px;
+  transition: transform 0.2s, color 0.3s;
 }
 
-.social-icons a {
-  margin: 0 10px;
-  font-size: 24px;
+.navbar a i:hover,
+.social-icons i:hover {
   color: #007bff;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.social-icons a:hover {
-  color: #0056b3;
   transform: scale(1.2);
 }
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 
 .fade-section {
   opacity: 0;

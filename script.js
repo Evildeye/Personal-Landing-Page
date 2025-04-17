@@ -6,12 +6,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Tutup nav saat link diklik di mobile
+    document.querySelector('.nav-links').classList.remove('active');
   });
 });
 
-// Add active class on scroll
+// Active link scroll
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.navbar nav ul li a');
+const navLinks = document.querySelectorAll('.navbar ul li a');
 
 window.addEventListener('scroll', () => {
   let current = '';
@@ -65,3 +68,9 @@ const appearOnScroll = new IntersectionObserver(function (entries, observer) {
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+// Toggle mobile menu
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+  

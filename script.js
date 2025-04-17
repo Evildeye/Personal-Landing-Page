@@ -6,13 +6,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
-
-    // Tutup nav saat link diklik di mobile
-    document.querySelector('.nav-links').classList.remove('active');
   });
 });
 
-// Active link scroll
+// Add active class on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar ul li a');
 
@@ -69,8 +66,11 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// Toggle mobile menu
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
+// Hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
-  
+                        

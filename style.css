@@ -363,3 +363,39 @@ footer.contact {
     gap: 10px;
   }
 }
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+    }
